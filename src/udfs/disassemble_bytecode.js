@@ -203,7 +203,7 @@ opcodes = function (op, full) {
   return {name: opcode, fee: code[1], in: code[2], out: code[3], dynamic: code[4], async: code[5]}
 };
 var parseCode = function (raw) {
-  raw = hexToIntArray(bytecode);
+  raw = hexToIntArray(raw);
   var code = [];
   for (var i = 0; i < raw.length; i++) {
     var opcode = opcodes(raw[i], true);
